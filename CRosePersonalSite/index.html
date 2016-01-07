@@ -146,6 +146,8 @@
                         </div>
                         <img src="img/portfolio/javascriptlogo.png" class="img-responsive" alt="">
                     </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">JavaScript Examples</p></div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
@@ -156,6 +158,8 @@
                         </div>
                         <img src="img/portfolio/carapp.png" class="img-responsive" alt="">
                     </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Car Application</p></div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
@@ -166,6 +170,8 @@
                         </div>
                         <img src="img/portfolio/blog.png" class="img-responsive" alt="">
                     </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Personal Blog</p></div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
@@ -176,6 +182,8 @@
                         </div>
                         <img src="img/portfolio/financialgraphic.png" class="img-responsive" alt="">
                     </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Financial Application</p></div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
@@ -186,6 +194,8 @@
                         </div>
                         <img src="img/portfolio/bugtracker.png" class="img-responsive" alt="">
                     </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Bug Tracker</p></div>
                 </div>
               
             </div>
@@ -279,7 +289,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Me</h2>
-                    <h3 class="section-subheading text-muted">Email: Cdrose15@gmail.com</h3>
+                    <h3 class="section-subheading text-muted"><a href="mailto:cdrose15@gmail.com">Email Me: Cdrose15@gmail.com</a></h3>
                 </div>
             </div>
             <div class="row">
@@ -409,10 +419,12 @@
 
                         <h1>Factorial Calculation</h1>
                         <h5>This Program Will Calculate the Factorial of a Number</h5>
+                        <p><b></b></p>
 
                         <p>Please enter a number: </p>
                         <input id="num" value=" " />
-                        <p><button onclick="getFactorial()">Calculate</button></p>
+                        <p><b></b></p>
+                        <p><button onclick="getFactorial()">Submit</button></p>
                         <p id="fac"></p>
 
                     </div>
@@ -420,19 +432,25 @@
                     <div class="col-lg-6">
    
                         <pre class="brush: js">
-                            
+                        
+                        // Function called during form submition    
                         function getFactorial() {
                             var num = document.getElementById("num").value
                             document.getElementById("fac").innerHTML = "Calculation = " + factorial(num);
-                        
                         }
+                        
+                        // Calculate factorial
                         function factorial(num) {
+                    
+                             // Factorial of 0 = 1
                              if (num == 0) {
                                 return 1;
                              }
                              if (num < 0) {
-                                return "Please enter a positive number";
+                                return "Undefined - Please enter a positive number";
                              }
+                           
+                             // Any other number will take the user num * num-1 until num  = 1
                              else {
                                 return num * factorial(num - 1);
                              }
@@ -477,8 +495,10 @@
 
                         <p> Please enter a number between 1 - 100: </p>
                         <input id="a">
+                        <p><b></b></p>
                         <p> Please enter a number between 1 - 100: </p>
                         <input id="b">
+                        <p><b></b></p>
                         <p><button id="fizzBuzzButton">Submit</button></p>
                         <p id="fizzBuzzResult"></p>
 
@@ -492,18 +512,30 @@
                             
                             $(document).ready(function() {
                                 $("#submit").click(function () {
+                    
+                                     // Getting values from each user inputted numbers
                                      var x = $("#a").val();
                                      var y = $("#b").val();
-                                     for (var i = 0; i <= 100; i++) {
+
+                                     // for loop for each instance of 1 - 100
+                                     for (var i = 1; i <= 100; i++) {
+
+                                         // If both numbers are multiples of each instance 1-100 print FizzBuzz
                                          if ((i % x == 0) && (i % y == 0)) {
                                             $("#result").append("FizzBuzz" + " ");
                                          }
+                                          
+                                         // If x is a multiple of each instance 1-100 print Fizz
                                          else if (i % x == 0) {
                                             $("#result").append("Fizz" + " ");
                                          }
+
+                                         // If y is a multiple of each instance 1-100 print Buzz
                                          else if (i % y == 0) {
                                             $("#result").append("Buzz" + " ");
                                          }
+                            
+                                         // If neither number is a multiple it will print the number 1-100
                                          else {
                                             $("#result").append(i + " ");
                                          }
@@ -545,10 +577,12 @@
 
                         <h1>Is Your Word a Palindrome?</h1>
                         <h5>This Program Will Let You Know if Your String is a Palindrome</h5>
+                        <p><b></b></p>
 
                         <p>Enter a word: </p>
                         <input id="word">
-                        <p><button id="palindrome"> Submit</button>
+                        <p><b></b></p>
+                        <p><button id="palindrome"> Submit</button><p>
                         <p id="result"></p>
 
                     </div>
@@ -614,6 +648,7 @@
                         <h1>Simple Calculations</h1>
                         <h3>Please Enter 5 Numbers</h3>
                         <h5>This Program will display the Sum, Product, Mean, Greatest Value, and Least Value</h5>
+                        <p><b></b></p>
 
                         <p>Number 1 :<input id="num1"></p>
                         <p>Number 2 :<input id="num2"></p>

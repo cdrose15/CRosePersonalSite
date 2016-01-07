@@ -10,7 +10,7 @@ function factorial(num) {
         return 1;
     }
     if (num < 0) {
-        return "Please enter a positive number";
+        return "Undefined - Please enter a positive number";
     }
     else {
         return num * factorial(num - 1);

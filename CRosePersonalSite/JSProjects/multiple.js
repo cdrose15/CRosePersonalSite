@@ -5,7 +5,7 @@
         var x = $("#a").val();
         var y = $("#b").val();
 
-        for (var i = 0; i <= 100; i++) {
+        for (var i = 1; i <= 100; i++) {
 
             if ((i % x == 0) && (i % y == 0)) {
                 $("#fizzBuzzResult").append("FizzBuzz" + " ");
