@@ -112,12 +112,12 @@
                             <p class="text-muted">Developer</p>
                             <ul class="list-inline social-buttons">
                                 <li>
-                                    <a href="https://www.facebook.com/Chris-Rose-Web-Developer-518959451610719/?fref=ts"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/Chris-Rose-Web-Developer-518959451610719/?fref=ts"target="_blank"><i class="fa fa-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a href="https://www.linkedin.com/profile/preview?vpa=pub&locale=en_US"><i class="fa fa-linkedin"></i></a>
+                                    <a href="https://www.linkedin.com/profile/preview?vpa=pub&locale=en_US"target="_blank"><i class="fa fa-linkedin"></i></a>
                                 </li>
-                                 <li><a href="https://github.com/cdrose15?tab=repositories"><i class="fa fa-github-alt"></i></a>
+                                 <li><a href="https://github.com/cdrose15?tab=repositories"target="_blank"><i class="fa fa-github-alt"></i></a>
                                  </li>
                             </ul>
                         </div>
@@ -327,11 +327,11 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="https://www.facebook.com/Chris-Rose-Web-Developer-518959451610719/?fref=ts"><i class="fa fa-facebook"></i></a>
+                        <li><a href="https://www.facebook.com/Chris-Rose-Web-Developer-518959451610719/?fref=ts"target="_blank"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="https://www.linkedin.com/profile/preview?vpa=pub&locale=en_US"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="https://www.linkedin.com/profile/preview?vpa=pub&locale=en_US"target="_blank"><i class="fa fa-linkedin"></i></a>
                         </li>
-                        <li><a href="https://github.com/cdrose15?tab=repositories"><i class="fa fa-github-alt"></i></a>
+                        <li><a href="https://github.com/cdrose15?tab=repositories"target="_blank"><i class="fa fa-github-alt"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -408,6 +408,7 @@
                     <div class="col-lg-6">
 
                         <h1>Factorial Calculation</h1>
+                        <h5>This Program Will Calculate the Factorial of a Number</h5>
 
                         <p>Please enter a number: </p>
                         <input id="num" value=" " />
@@ -471,6 +472,8 @@
                     <div class="col-lg-6">
 
                         <h1>Fizz Buzz</h1>
+                        <p><h5>This Program Will Output Fizz / Buzz / FizzBizz
+                            Based on Multiples for 1-100</h5></p>
 
                         <p> Please enter a number between 1 - 100: </p>
                         <input id="a">
@@ -541,6 +544,7 @@
                     <div class="col-lg-6">
 
                         <h1>Is Your Word a Palindrome?</h1>
+                        <h5>This Program Will Let You Know if Your String is a Palindrome</h5>
 
                         <p>Enter a word: </p>
                         <input id="word">
@@ -555,9 +559,17 @@
                             $(document).ready(function () {
                                  $("#palindrome").click(function () {
                                     var string = $("#word").val();
+
+                                    // Convert String to Upper Case
                                     string = string.toUpperCase();
+
+                                    // Remove White Space From Front and Back of String
                                     string = string.trim();
+
+                                    // Split , Reverse, and Join to Reverse Entire String
                                     var reverseString = string.split('').reverse().join('');
+
+                                    // If Statement to check if User Input = Revered User Input and Output
                                     if (string == reverseString) {
                                     $("#result").append("Yep! " + string + " is a Palindrome");
                                     }
@@ -595,29 +607,59 @@
                 </div>
             </div>
 
-            <!-- JavaScript Code for MinMax using SyntaxHighligter-->
-
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <pre class="brush: js">
-                            
-                            function test(){
-                                a = 12
-                                b = 45
-                                c = 6
-                                return (a+b+c);
-                                return MinMax
-                            }
-                        </pre>
-                    </div>
+                 
+                        <h1>Simple Calculations</h1>
+                        <h3>Please Enter 5 Numbers</h3>
+                        <h5>This Program will display the Sum, Product, Mean, Greatest Value, and Least Value</h5>
 
-                    <!-- Link Embedded-->
+                        <p>Number 1 :<input id="num1"></p>
+                        <p>Number 2 :<input id="num2"></p>
+                        <p>Number 3 :<input id="num3"></p>
+                        <p>Number 4 :<input id="num4"></p>
+                        <p>Number 5 :<input id="num5"></p>
+                        <p><button id="submit">Submit</button></p>
+                        <p id="sum"></p>
+                        <p id="product"></p>
+                        <p id="mean"></p>
+                        <p id="max"></p>
+                        <p id="min"></p>
+
+                    </div>
 
                     <div class="col-lg-6">
 
-                        <!--Put link in here-->
+                        <pre class=" =brush: js">
+                        $(document).ready(function () {
+                            $("#submit").click(function () {
 
+                                // Parse all strings to Integer Values
+                                n1 = parseInt($("#num1").val(), 10);
+                                n2 = parseInt($("#num2").val(), 10);
+                                n3 = parseInt($("#num3").val(), 10);
+                                n4 = parseInt($("#num4").val(), 10);
+                                n5 = parseInt($("#num5").val(), 10);
+                                
+                                // Complete Basic Math Calculations
+                                a = (n1 + n2 + n3 + n4 + n5);
+                                b = (n1 * n2 * n3 * n4 * n5);
+                                c = ((n1 + n2 + n3 + n4 + n5) /5);
+
+                                // Built in Methods
+                                d = Math.max(n1, n2, n3, n4, n5);
+                                e = Math.min(n1, n2, n3, n4, n5);
+
+                                // Output all Calculations
+                                $("#sum").append("The sum = " + a);
+                                $("#product").append("The product = " + b);
+                                $("#mean").append("The mean = " + c);
+                                $("#max").append("The maximum value = " + d);
+                                $("#min").append("The minimum value = " + e);
+                            });
+                        });
+                        </pre>
                     </div>
                 </div>
             </div>       
@@ -760,10 +802,11 @@
                             <!-- Custom Theme JavaScript -->
                             <script src="js/agency.js"></script>
 
-                            <!--JavaScript Exercise's-->
+                            <!--JavaScript Exercise js files-->
                             <script src="JSProjects/fact.js"></script>
                             <script src="JSProjects/multiple.js"></script>
                             <script src="JSProjects/palindrome.js" ></script>
+                            <script src="JSProjects/calculations.js"></script>
 
                             <!--Needed to use Syntax Highlighter-->
                             <script type="text/javascript">

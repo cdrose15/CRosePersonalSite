@@ -187,13 +187,6 @@
     <Content Include="img\about\2.jpg" />
     <Content Include="img\about\3.jpg" />
     <Content Include="img\header-bg.jpg" />
-    <Content Include="img\logos\aetuts.jpg" />
-    <Content Include="img\logos\creative-market.jpg" />
-    <Content Include="img\logos\designmodo.jpg" />
-    <Content Include="img\logos\envato.jpg" />
-    <Content Include="img\logos\microlancer.jpg" />
-    <Content Include="img\logos\themeforest.jpg" />
-    <Content Include="img\logos\wordpress.jpg" />
     <Content Include="img\map-image.png" />
     <Content Include="img\portfolio\blog.png" />
     <Content Include="img\portfolio\bugtracker.png" />
@@ -206,6 +199,7 @@
     <Content Include="img\portfolio\palindrome.png" />
     <Content Include="img\team\crosepic.jpg" />
     <Content Include="index.html" />
+    <Content Include="JSProjects\calculations.js" />
     <Content Include="JSProjects\fact.js" />
     <Content Include="JSProjects\multiple.js" />
     <Content Include="JSProjects\palindrome.js" />
