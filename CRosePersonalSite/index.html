@@ -98,9 +98,11 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About Me</h2>
-                    <h3 class="section-subheading text-muted">Most recently I have made the decision to get back to my passion in life, development.
-                    After attending college I left the field, to work in a management position which has given me great leadership experience over the 
-                    past years. In my free time I enjoy watching movies, attending sporting events, and spending time with my family.</h3>
+                    <h3 class="section-subheading text-muted">I am orignally from Pittsburgh, Pennsylvania, where I had spent most of my life. It was in 2012 
+                    that I relocated to my current location, High Point, North Carolina. Most recently I have made the decision to get back to my passion in life, 
+                    software development. After graduating from the University of Pittsburgh (Hail 2 Pitt!), I left the technology field to work in a high level management 
+                    position which has given me great leadership experience over the past years. In my free time I enjoy watching movies of all genres, attending sporting events
+                    (especially Pittsburgh teams), and spending time with my family.</h3>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
@@ -115,10 +117,13 @@
                                 <li>
                                     <a href="https://www.linkedin.com/profile/preview?vpa=pub&locale=en_US"><i class="fa fa-linkedin"></i></a>
                                 </li>
+                                 <li><a href="https://github.com/cdrose15?tab=repositories"><i class="fa fa-github-alt"></i></a>
+                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
+              </div>
         </div>
     </section>
 
@@ -326,6 +331,8 @@
                         </li>
                         <li><a href="https://www.linkedin.com/profile/preview?vpa=pub&locale=en_US"><i class="fa fa-linkedin"></i></a>
                         </li>
+                        <li><a href="https://github.com/cdrose15?tab=repositories"><i class="fa fa-github-alt"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -396,18 +403,28 @@
                 </div>
             </div>
 
-<!-- JavaScript Code for Factorial using SyntaxHighligter-->
-
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
+
+                        <h1>Factorial Calculation</h1>
+
+                        <p>Please enter a number: </p>
+                        <input id="num" value=" " />
+                        <p><button onclick="getFactorial()">Calculate</button></p>
+                        <p id="fac"></p>
+
+                    </div>
+
+                    <div class="col-lg-6">
+   
                         <pre class="brush: js">
                             
                         function getFactorial() {
                             var num = document.getElementById("num").value
                             document.getElementById("fac").innerHTML = "Calculation = " + factorial(num);
+                        
                         }
-
                         function factorial(num) {
                              if (num == 0) {
                                 return 1;
@@ -420,19 +437,7 @@
                              }
                         }
                             
-                        </pre>
-                    </div>
-
-<!--Factorial JavaScript Program-->
-
-                    <div class="col-lg-6">
-   
-                        <h1>Factorial Calculation</h1>
-
-                        <p>Please enter a number: </p>
-                        <input id="num" value=" " />
-                        <button onclick="getFactorial()">Calculate</button>
-                        <p id="fac"></p>
+                        </pre>                    
 
                     </div>
                 </div>
@@ -460,36 +465,49 @@
                     </div>
                 </div>
             </div>
-           
-            <!-- JavaScript Code for FizzBuzz using SyntaxHighligter-->
-
+       
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <pre class="brush: js">
-                            
-                            function test(){
-                                a = 12
-                                b = 45
-                                c = 6
-                                return (a+b+c);
-                                return FizzBuzz
-                            }
-                        </pre>
+
+                        <h1>Fizz Buzz</h1>
+
+                        <p> Please enter a number between 1 - 100: </p>
+                        <input id="a">
+                        <p> Please enter a number between 1 - 100: </p>
+                        <input id="b">
+                        <p><button id="fizzBuzzButton">Submit</button></p>
+                        <p id="fizzBuzzResult"></p>
+
                     </div>
 
                     <!-- FizzBuzz JavaScript Code -->
 
                     <div class="col-lg-6">
 
-                        <h1>Fizz Buzz</h1>
-
-                        <p> Please enter a number between 1 - 100: </p>
-                        <input id="a" value=" " />
-                        <p> Please enter a number between 1 - 100: </p>
-                        <input id="b" value=" " />
-                        <button onclick="getMultiple()">Submit</button>
-                        <p id="mult"></p><br />
+                        <pre class="brush: js">
+                            
+                            $(document).ready(function() {
+                                $("#submit").click(function () {
+                                     var x = $("#a").val();
+                                     var y = $("#b").val();
+                                     for (var i = 0; i <= 100; i++) {
+                                         if ((i % x == 0) && (i % y == 0)) {
+                                            $("#result").append("FizzBuzz" + " ");
+                                         }
+                                         else if (i % x == 0) {
+                                            $("#result").append("Fizz" + " ");
+                                         }
+                                         else if (i % y == 0) {
+                                            $("#result").append("Buzz" + " ");
+                                         }
+                                         else {
+                                            $("#result").append(i + " ");
+                                         }
+                                     }
+                                 });
+                            });
+                        </pre>
 
                     </div>
                 </div>
@@ -518,28 +536,38 @@
                 </div>
             </div>
 
-            <!-- JavaScript Code for Palindrome using SyntaxHighligter-->
-
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <pre class="brush: js">
-                            
-                            function test(){
-                                a = 12
-                                b = 45
-                                c = 6
-                                return (a+b+c);
-                                return Palindrome?
-                            }
-                        </pre>
-                    </div>
 
-                    <!-- Link Embedded-->
+                        <h1>Is Your Word a Palindrome?</h1>
+
+                        <p>Enter a word: </p>
+                        <input id="word">
+                        <p><button id="palindrome"> Submit</button>
+                        <p id="result"></p>
+
+                    </div>
 
                     <div class="col-lg-6">
 
-                        <!--Put link in here-->
+                        <pre class="brush: js">
+                            $(document).ready(function () {
+                                 $("#palindrome").click(function () {
+                                    var string = $("#word").val();
+                                    string = string.toUpperCase();
+                                    string = string.trim();
+                                    var reverseString = string.split('').reverse().join('');
+                                    if (string == reverseString) {
+                                    $("#result").append("Yep! " + string + " is a Palindrome");
+                                    }
+                                    else {
+                                    $("#result").append("Sorry! " + string + " is not a Palindrome");
+                                    }
+                                });
+                             });
+                            
+                        </pre>
 
                     </div>
                 </div>
@@ -606,7 +634,7 @@
         </div>
     </div>
                             
-    <!-- Portfolio Modal 2 -->
+    <!-- Portfolio Modal 2 Car Application -->
                             <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-content">
                                     <div class="close-modal" data-dismiss="modal">
@@ -619,12 +647,11 @@
                                         <div class="row">
                                             <div class="col-lg-8 col-lg-offset-2">
                                                 <div class="modal-body">
-                                                    <h2>Project Heading</h2>
-                                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                                    <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
-                                                    <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                                                    <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                                    <h2>Car Application</h2>
+                                                    <p class="item-intro text-muted">Coming Soon!.</p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return to Portfolio</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -632,7 +659,7 @@
                                 </div>
                             </div>
 
-    <!-- Portfolio Modal 3 -->
+    <!-- Portfolio Modal 3 Blog -->
                             <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-content">
                                     <div class="close-modal" data-dismiss="modal">
@@ -646,12 +673,11 @@
                                             <div class="col-lg-8 col-lg-offset-2">
                                                 <div class="modal-body">
                                                     <!-- Project Details Go Here -->
-                                                    <h2>Project Name</h2>
-                                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                                    <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                                                    <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
-                                                    <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                                    <h2>Blog</h2>
+                                                    <p class="item-intro text-muted">Coming Soon!.</p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return to Portfolio</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -659,7 +685,7 @@
                                 </div>
                             </div>
 
-   <!-- Portfolio Modal 4 -->
+   <!-- Portfolio Modal 4 Financial  -->
                             <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-content">
                                     <div class="close-modal" data-dismiss="modal">
@@ -673,12 +699,11 @@
                                             <div class="col-lg-8 col-lg-offset-2">
                                                 <div class="modal-body">
                                                     <!-- Project Details Go Here -->
-                                                    <h2>Project Name</h2>
-                                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                                    <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
-                                                    <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
-                                                    <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                                    <h2>Financial Application</h2>
+                                                    <p class="item-intro text-muted">Coming Soon!</p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return to Portfolio</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -686,7 +711,7 @@
                                 </div>
                             </div>
 
-   <!-- Portfolio Modal 5 -->
+   <!-- Portfolio Modal 5 Bug Tracker -->
                             <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-content">
                                     <div class="close-modal" data-dismiss="modal">
@@ -700,12 +725,11 @@
                                             <div class="col-lg-8 col-lg-offset-2">
                                                 <div class="modal-body">
                                                     <!-- Project Details Go Here -->
-                                                    <h2>Project Name</h2>
-                                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                                    <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
-                                                    <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
-                                                    <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                                    <h2>Bug Tracker</h2>
+                                                    <p class="item-intro text-muted">Coming Soon!</p>
+                                                    <p></p>
+                                                    <p></p>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Return to Portfolio</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -714,6 +738,7 @@
                             </div>
 
                             <!-- jQuery -->
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
                             <script src="js/jquery.js"></script>
 
                             <!-- Bootstrap Core JavaScript -->
@@ -738,6 +763,8 @@
                             <!--JavaScript Exercise's-->
                             <script src="JSProjects/fact.js"></script>
                             <script src="JSProjects/multiple.js"></script>
+                            <script src="JSProjects/palindrome.js" ></script>
+
                             <!--Needed to use Syntax Highlighter-->
                             <script type="text/javascript">
                                 SyntaxHighlighter.all();

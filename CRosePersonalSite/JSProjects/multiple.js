@@ -1,24 +1,24 @@
-﻿function getMultiple() {
+﻿$(document).ready(function() {
 
-    var x = document.getElementById("a").value
-    var y = document.getElementById("b").value
-    document.getElementById("mult").innerHTML = multiple(x, y);
-}
+    $("#fizzBuzzButton").click(function () {
 
-function multiple(x,y) {
-    for (i=1; i<=100; i++){
+        var x = $("#a").val();
+        var y = $("#b").val();
 
-         if (i % x == 0 && i % y == 0){
-             document.write ("FizzBuzz" + "-")
-         }
-        else if (i % x == 0) {
-             document.write  ("Fizz" + "-")
+        for (var i = 0; i <= 100; i++) {
+
+            if ((i % x == 0) && (i % y == 0)) {
+                $("#fizzBuzzResult").append("FizzBuzz" + " ");
+            }
+            else if (i % x == 0) {
+                $("#fizzBuzzResult").append("Fizz" + " ");
+            }
+            else if (i % y == 0) {
+                $("#fizzBuzzResult").append("Buzz" + " ");
+            }
+            else {
+                $("#fizzBuzzResult").append(i + " ");
+            }
         }
-        else if (i % y == 0) {
-            document.write ("Buzz" + "-")
-        }
-        else{
-             document.write ( i + "-");
-        }    
-    }
-}
+    });
+});
