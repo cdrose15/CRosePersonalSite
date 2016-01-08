@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,11 +21,18 @@ namespace CRosePersonalSite.Controllers
             return View();
         }
 
-        public ActionResult Contact()
-        {
+        public JsonResult Contact(string name, string email, string phone, string message)
+       {
+                    new EmailService().SendAsync(new IdentityMessage{
+            Destination = "cdrose15@gmail.com", Subject = "Message from my website", Body = message});
+
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return Json("",JsonRequestBehavior.AllowGet);
+
         }
+         
+
+    
     }
 }

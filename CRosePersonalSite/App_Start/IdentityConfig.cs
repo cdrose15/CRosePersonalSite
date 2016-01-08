@@ -11,6 +11,10 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using CRosePersonalSite.Models;
+using System.Net;
+using SendGrid;
+using System.Configuration;
+using System.Net.Mail;
 
 namespace CRosePersonalSite
 {
@@ -18,7 +22,20 @@ namespace CRosePersonalSite
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Plug in your email service here to send an email.
+            var username = ConfigurationManager.AppSettings ["SendGridUserName"];
+            var password = ConfigurationManager.AppSettings["SendGridUserPassword"];
+            var from = ConfigurationManager.AppSettings["ContactEmail"];
+
+            SendGridMessage myMessage = new SendGridMessage();
+            myMessage.AddTo(message.Destination);
+            myMessage.From = new MailAddress(from);
+            myMessage.Subject = message.Subject;
+            myMessage.Html = message.Body;
+
+            var credentials = new NetworkCredential(username, password);
+            var transportWeb = new Web(credentials);
+            transportWeb.DeliverAsync(myMessage);
+
             return Task.FromResult(0);
         }
     }

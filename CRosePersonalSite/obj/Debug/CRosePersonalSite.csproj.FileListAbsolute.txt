@@ -53,3 +53,8 @@ C:\Users\cdros\OneDrive\Documents\Visual Studio 2013\Projects\CRosePersonalSite\
 C:\Users\cdros\OneDrive\Documents\Visual Studio 2013\Projects\CRosePersonalSite\CRosePersonalSite\obj\Debug\CRosePersonalSite.csprojResolveAssemblyReference.cache
 C:\Users\cdros\OneDrive\Documents\Visual Studio 2013\Projects\CRosePersonalSite\CRosePersonalSite\obj\Debug\CRosePersonalSite.dll
 C:\Users\cdros\OneDrive\Documents\Visual Studio 2013\Projects\CRosePersonalSite\CRosePersonalSite\obj\Debug\CRosePersonalSite.pdb
+C:\Users\cdros\OneDrive\Documents\Visual Studio 2013\Projects\CRosePersonalSite\CRosePersonalSite\bin\SendGrid.dll
+C:\Users\cdros\OneDrive\Documents\Visual Studio 2013\Projects\CRosePersonalSite\CRosePersonalSite\bin\SendGrid.SmtpApi.dll
+C:\Users\cdros\OneDrive\Documents\Visual Studio 2013\Projects\CRosePersonalSite\CRosePersonalSite\bin\SendGridMail.dll
+C:\Users\cdros\OneDrive\Documents\Visual Studio 2013\Projects\CRosePersonalSite\CRosePersonalSite\bin\System.Net.Http.Formatting.dll
+C:\Users\cdros\OneDrive\Documents\Visual Studio 2013\Projects\CRosePersonalSite\CRosePersonalSite\bin\System.Net.Http.Formatting.xml
