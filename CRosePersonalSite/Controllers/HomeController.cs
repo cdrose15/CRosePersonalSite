@@ -24,15 +24,13 @@ namespace CRosePersonalSite.Controllers
         public JsonResult Contact(string name, string email, string phone, string message)
        {
                     new EmailService().SendAsync(new IdentityMessage{
-            Destination = "cdrose15@gmail.com", Subject = "Message from my website", Body = message});
+            Destination = "cdrose15@gmail.com", Subject = "Message from my website", Body = "Name of Sender:"
+            + name + " Email Address:" + email + " Phone Number:" + phone + "   " + message});
 
             ViewBag.Message = "Your contact page.";
 
             return Json("",JsonRequestBehavior.AllowGet);
 
         }
-         
-
-    
     }
 }
