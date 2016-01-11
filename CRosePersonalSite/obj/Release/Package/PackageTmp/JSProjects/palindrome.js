@@ -7,10 +7,10 @@
         var reverseString = string.split('').reverse().join('');
 
         if (string == reverseString) {
-            $("#result").append("Yep! " + string + " is a Palindrome");
+            $("#result").text("Yep! " + string + " is a Palindrome");
         }
         else {
-            $("#result").append("Sorry! " + string + " is not a Palindrome");
+            $("#result").text("Sorry! " + string + " is not a Palindrome");
         }
     });
 });

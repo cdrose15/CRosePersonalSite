@@ -125,6 +125,7 @@
                     </div>
                 </div>
               </div>
+            </div> 
     </section>
 
     <!-- Portfolio Grid Section -->
@@ -617,10 +618,10 @@
 
                                     // If Statement to check if User Input = Revered User Input and Output
                                     if (string == reverseString) {
-                                    $("#result").append("Yep! " + string + " is a Palindrome");
+                                    $("#result").text("Yep! " + string + " is a Palindrome");
                                     }
                                     else {
-                                    $("#result").append("Sorry! " + string + " is not a Palindrome");
+                                    $("#result").text("Sorry! " + string + " is not a Palindrome");
                                     }
                                 });
                              });
@@ -699,11 +700,11 @@
                                 e = Math.min(n1, n2, n3, n4, n5);
 
                                 // Output all Calculations
-                                $("#sum").append("The sum = " + a);
-                                $("#product").append("The product = " + b);
-                                $("#mean").append("The mean = " + c);
-                                $("#max").append("The maximum value = " + d);
-                                $("#min").append("The minimum value = " + e);
+                                $("#sum").text("The sum = " + a);
+                                $("#product").text("The product = " + b);
+                                $("#mean").text("The mean = " + c);
+                                $("#max").text("The maximum value = " + d);
+                                $("#min").text("The minimum value = " + e);
                             });
                         });
                         </pre>
@@ -860,6 +861,7 @@
                                 SyntaxHighlighter.all();
                             </script>
 
+                            <!--Function for Submit From Using SendGrid-->
                            <script type="text/javascript">
                             $('#form-btn').click(function () {
 
@@ -868,6 +870,8 @@
                                  var message = $('#message').val();
                                  var phone = $('#phone').val();
                                  $.post('/Home/Contact', { name: name, email: email, message: message, phone: phone }).then(function (response) {
+                                     //clear all fields
+                                     $('#success').trigger("reset");
                                      // Successful Message
                                      $('#success').html("<div class='alert alert-success'>");
                                      $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -876,7 +880,14 @@
                                          .append("<strong>Your message has been sent. </strong>");
                                      $('#success > .alert-success')
                                          .append('</div>');
-      
+
+                                     // Failed Message
+                                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                                         .append("</button>");
+                                     $('#success > .alert-success')
+                                         .append("<strong>Your message has been sent. </strong>");
+                                     $('#success > .alert-success')
+                                         .append('</div>');
                                  });
                             });
                             </script>

@@ -13,10 +13,10 @@
          d = Math.max(n1, n2, n3, n4, n5);
          e = Math.min(n1, n2, n3, n4, n5);
 
-        $("#sum").append("The sum = " + a);
-        $("#product").append("The product = " + b);
-        $("#mean").append("The mean = " + c);
-        $("#max").append("The maximum value = " + d);
-        $("#min").append("The minimum value = " + e);
+        $("#sum").text("The sum = " + a);
+        $("#product").text("The product = " + b);
+        $("#mean").text("The mean = " + c);
+        $("#max").text("The maximum value = " + d);
+        $("#min").text("The minimum value = " + e);
     });
 });
