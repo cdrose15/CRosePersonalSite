@@ -188,7 +188,7 @@
                         <img src="img/portfolio/financialgraphic.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <p>Financial Application</p></div>
+                        <p>Household Budgeter</p></div>
                 </div>
                 <div class="col-md-3 col-sm-6 portfolio-item">
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
@@ -225,8 +225,8 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>April 2009</h4>
-                                    <h4 class="subheading">University of Pittsburgh</h4>
+                                    <h4 id="turncolor">April 2009</h4>
+                                    <h4 id="turncolor" class="subheading">University of Pittsburgh</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p>Graduated with Bacholor's of Science Information Sciences</p>
@@ -239,8 +239,8 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>April 2010 - January 2011</h4>
-                                    <h4 class="subheading">Management Experience</h4>
+                                    <h4 id="turncolor">April 2010 - January 2011</h4>
+                                    <h4 id="turncolor" class="subheading">Management Experience</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p>Promotted to an Assistant Manager at Sheetz Inc. This is where I was able to start learning how to be a leader. </p>
@@ -253,8 +253,8 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>January 2011 - December 2015</h4>
-                                    <h4 class="subheading">Store Manager</h4>
+                                    <h4 id="turncolor">January 2011 - December 2015</h4>
+                                    <h4 id="turncolor" class="subheading">Store Manager</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p>Promotted to Store Manager for multiple Sheetz locations. Gaining exceptional leadership experience by managing teams upward of 30 employees. </p>
@@ -267,8 +267,8 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>January 2016 - March 2016</h4>
-                                    <h4 class="subheading">Coder Foundry</h4>
+                                    <h4 id="turncolor">January 2016 - March 2016</h4>
+                                    <h4 id="turncolor" class="subheading">Coder Foundry</h4>
                                 </div>
                                 <div class="timeline-body">
                                     <p>It was time to get back to my true passion, developing! Attending this coding bootcamp has changed my life.</p>
@@ -281,19 +281,18 @@
                                     <br>the future
                                     <br>take me !</h4>
                             </div>
+                            </ul>
            
                             <div class="timeline-inverted"></div>
                             <div class="timeline-panel">
-                                <div class="timeline-heading">
+                                <div id="myskills" class="timeline-heading">
                                     <h4>My Skills Include:</h4>
                                 </div>
-                                <div class="timeline-body">
-                                    <ul>
-                                        <li>HTML5/CSS</li>
-                                        <li>JavaScript/jQuery/Bootstrap</li>
-                                        <li>AngularJS</li>
-                                        <li>C# / MVC</li>
-                                    </ul>
+                                <div id="myskills" class="timeline-body">
+                                        <p>HTML5/CSS</p>
+                                        <p>JavaScript/jQuery/Bootstrap</p>
+                                        <p>AngularJS</p>
+                                        <p>C# / MVC</p>
                                 </div>
                             </div>
                         </div>
@@ -442,9 +441,9 @@
                         <p><b></b></p>
 
                         <p>Please enter a number: </p>
-                        <input id="num" value=" " />
+                        <input class="inputfield" id="num" value=" " />
                         <p><b></b></p>
-                        <p><button onclick="getFactorial()">Submit</button></p>
+                        <p><button class="btn btn-default" onclick="getFactorial()">Submit</button></p>
                         <p id="fac"></p>
 
                     </div>
@@ -514,12 +513,12 @@
                             Based on Multiples for 1-100</h5></p>
 
                         <p> Please enter a number between 1 - 100: </p>
-                        <input id="a">
+                        <input class="inputfield" id="a">
                         <p><b></b></p>
                         <p> Please enter a number between 1 - 100: </p>
-                        <input id="b">
+                        <input class="inputfield" id="b">
                         <p><b></b></p>
-                        <p><button id="fizzBuzzButton">Submit</button></p>
+                        <p><button id="fizzBuzzButton" class="btn btn-default">Submit</button></p>
                         <p id="fizzBuzzResult"></p>
 
                     </div>
@@ -600,9 +599,9 @@
                         <p><b></b></p>
 
                         <p>Enter a word: </p>
-                        <input id="word">
+                        <input class="inputfield" id="word">
                         <p><b></b></p>
-                        <p><button id="palindrome"> Submit</button><p>
+                        <p><button id="palindrome" class="btn btn-default"> Submit</button><p>
                         <p id="result"></p>
 
                     </div>
@@ -670,12 +669,12 @@
                         <h5>This Program will display the Sum, Product, Mean, Greatest Value, and Least Value</h5>
                         <p><b></b></p>
 
-                        <p>Number 1 :<input id="num1"></p>
-                        <p>Number 2 :<input id="num2"></p>
-                        <p>Number 3 :<input id="num3"></p>
-                        <p>Number 4 :<input id="num4"></p>
-                        <p>Number 5 :<input id="num5"></p>
-                        <p><button id="submit">Submit</button></p>
+                        <p>Number 1 :<input class="inputfield" id="num1"></p>
+                        <p>Number 2 :<input class="inputfield" id="num2"></p>
+                        <p>Number 3 :<input class="inputfield" id="num3"></p>
+                        <p>Number 4 :<input class="inputfield" id="num4"></p>
+                        <p>Number 5 :<input class="inputfield" id="num5"></p>
+                        <p><button id="submit" class="btn btn-default">Submit</button></p>
                         <p id="sum"></p>
                         <p id="product"></p>
                         <p id="mean"></p>
@@ -799,8 +798,15 @@
                                             <div class="col-lg-8 col-lg-offset-2">
                                                 <div class="modal-body">
                                                     <!-- Project Details Go Here -->
-                                                    <h2>Financial Application</h2>
-                                                    <p class="item-intro">Coming Soon!</p>
+                                                    <h2>Financial Budget</h2>
+                                                    <p class="item-intro">Created using MVC and Razor<p />
+                                                    <p class="item-intro">
+                                                        This application is a fully secured functional personal budget system. Track your Accounts, Income and Expenses,
+                                                        set Budgets by Category, and keep a close eye on your monthly spending. If you have other individuals
+                                                        that you share your expenses with you can Invite them, and have them join to access and edit all of the joint
+                                                        Account information.                           
+                                                    </p>
+                                                    <p class="item-intro"><a href="http://crose-budget.azurewebsites.net/" target="_blank">Click here to get started!</a></p><br /><br />
                                                     <p></p>
                                                     <p></p>
                                                 </div>

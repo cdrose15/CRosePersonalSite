@@ -216,6 +216,7 @@
     <Content Include="img\portfolio\minmaxetc.png" />
     <Content Include="img\portfolio\palindrome.png" />
     <Content Include="img\team\crosepic.JPG" />
+    <Content Include="img\team\IMG_ChrisRose.tif" />
     <Content Include="index.html" />
     <Content Include="JSProjects\calculations.js" />
     <Content Include="JSProjects\fact.js" />

@@ -1,5 +1,6 @@
 ﻿body{
     background-color:cadetblue;
+    color:beige;
     
 }
 
@@ -13,4 +14,24 @@
 
 .portfolio-modal{
     background-color:cadetblue ;
+}
+
+.section-subheading{
+    color:beige;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color:black;
+}
+
+#myskills{
+    text-align :center ;
+}
+
+#turncolor{
+    color:black;
+}
+
+.inputfield{
+    color:black;
 }
